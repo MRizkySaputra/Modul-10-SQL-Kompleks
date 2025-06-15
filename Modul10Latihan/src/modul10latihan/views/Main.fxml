@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #578FCA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="modul10latihan.controllers.MainController">
+    <children>
+        <Button fx:id="btnSorting" layoutX="954.0" layoutY="120.0" onAction="#handleButtonSorting" text="Sorting">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+        <TableView fx:id="tblViewBuku" layoutX="13.0" layoutY="172.0" prefHeight="418.0" prefWidth="996.0">
+            <columns>
+                <TableColumn fx:id="colKodeBuku" prefWidth="75.0" text="Kode Buku" />
+                <TableColumn fx:id="colKategori" prefWidth="160.0" text="Kategori" />
+                <TableColumn fx:id="colJudul" prefWidth="250.0" text="Judul" />
+                <TableColumn fx:id="colPengarang" minWidth="0.0" prefWidth="97.0" text="Pengarang" />
+                <TableColumn fx:id="colPenerbit" prefWidth="113.0" text="Penerbit" />
+                <TableColumn fx:id="colTahun" prefWidth="101.0" text="Tahun Terbit" />
+                <TableColumn fx:id="colEdisi" prefWidth="72.0" text="Edisi" />
+                <TableColumn fx:id="colPengadaan" prefWidth="127.0" text="Tanggal Pengadaan" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="cbxSorting" layoutX="760.0" layoutY="120.0" prefHeight="26.0" prefWidth="183.0" />
+      <Label layoutX="476.0" layoutY="33.0" text="Perpustakaan">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpcDari" layoutX="14.0" layoutY="120.0" promptText="Dari Tanggal Pengadaan" />
+      <DatePicker fx:id="dpcSampai" layoutX="200.0" layoutY="120.0" promptText="Sampai Tanggal Pengadaan" />
+      <ComboBox fx:id="cbxKategori" layoutX="546.0" layoutY="120.0" prefWidth="150.0" promptText="Kategori Buku" />
+      <Button fx:id="btnFilter" layoutX="707.0" layoutY="120.0" onAction="#handleBtnFilter" text="Filter">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtJudul" layoutX="386.0" layoutY="120.0" promptText="Judul Buku" />
+      <Button fx:id="btnClearFilter" layoutX="834.0" layoutY="82.0" text="Clear Filter" onAction="#handleClearFilter">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClearSorting" layoutX="921.0" layoutY="82.0" text="Clear Sorting" onAction="#handleClearSorting">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClearAll" layoutX="759.0" layoutY="82.0" text="Clear All" onAction="#handleClearAll">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
